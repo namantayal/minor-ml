@@ -2,11 +2,11 @@
 #include <fstream>
 
 #define row 5456
-#define col 5
+#define col 4
 
 using namespace std;
 
-void read_csv(float X[][col - 1], int Y[])
+void read_csv(float X[][col], int Y[])
 {
     fstream fin;
     string data;
@@ -14,7 +14,7 @@ void read_csv(float X[][col - 1], int Y[])
     for (int i = 0; i < row; i++)
     {
         int j;
-        for (j = 0; j < col - 1; j++)
+        for (j = 0; j < col; j++)
         {
             getline(fin, data, ',');
             X[i][j] = stof(data);
@@ -27,7 +27,7 @@ void read_csv(float X[][col - 1], int Y[])
 
 int main()
 {
-    float X[row][col - 1];
+    float X[row][col];
     int Y[row];
     read_csv(X, Y);
     return 0;
