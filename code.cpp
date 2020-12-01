@@ -3,10 +3,10 @@
 #include <vector>
 #include <bits/stdc++.h>
 
-#define Xrow 4092
+#define Xrow 3473
 #define Xcol 5
-#define Ycol 4
-#define Xrow_test 1364
+#define Ycol 3
+#define Xrow_test 1157
 
 using namespace std;
 
@@ -58,10 +58,8 @@ void read_csv(vector<vector<double>> &X, vector<vector<int>> &Y, vector<vector<d
 string map_to_answer(int value)
 {
     if(value==0)
-        return "Slight Right";
-    else if(value==1)
         return "Sharp Right";
-    else if(value==2)
+    else if(value==1)
         return "Move Forward";
     else
         return "Slight Left";
